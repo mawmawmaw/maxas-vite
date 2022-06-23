@@ -1,0 +1,91 @@
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder {
+    color: #ffffff66;
+    font-size: 12px;
+  }
+input[type=number] {
+  -moz-appearance: textfield;
+}
+h2.counter {
+    text-align: center;
+    font-size: 52px;
+    padding: 10px 40px;
+    margin: 0 auto 60px;
+    color: var(--text-color);
+    animation: blink 1s ease infinite;
+    border: 5px solid var(--text-color);
+    border-radius: 20px;
+    width: 380px;
+}
+@keyframes blink {
+    from{
+        opacity: .2;
+    }
+    50%{
+        opacity: .8;
+    }
+    to{
+        opacity: .2;
+    }
+}
+form.register {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+form.register .input-container {
+    display: inline-grid;
+    margin: 0 5px;
+}
+form.register .input-container label{
+    color: var(--text-color);
+    font-size: 12px;
+}
+form.register .input-container input{
+    position: relative;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+    font-family: 'Kdam Thmor Pro'
+}
+form.register .input-container input#area{
+    width: 26px;
+}
+form.register .input-container input#phone{
+    width: 100px;
+}
+form.register button.button{
+    color: var(--text-color);
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: var(--pink-accent);
+    border: 5px solid var(--blue-accent);
+    box-shadow: 5px 5px 0 0 var(--aqua-accent);
+    width: 100%;
+    padding: 10px 80px;
+    margin: 20px auto;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro';
+}
+form.register button.button:hover{
+    font-weight: bold;
+    box-shadow: 8px 8px 0 0 var(--aqua-accent);
+}
+@media screen and (max-width: 768px) {
+    h2.counter {
+        font-size: 32px;
+        padding: 5px 20px;
+        margin: 80px auto 40px;
+        border: 4px solid var(--text-color);
+        width: 300px;
+    }
+}

@@ -1,5 +1,4 @@
 const canvas = document.querySelector('#scene');
-
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 const ctx = canvas.getContext('2d');
@@ -126,42 +125,7 @@ function render(a) {
   }
   window.requestAnimationFrame(render);
 }
-
-
-// Function called after the user resized its screen
-function afterResize () {
-  width = canvas.clientWidth;
-  height = canvas.clientHeight;
-  if (window.devicePixelRatio > 1) {
-    canvas.width = canvas.clientWidth * 2;
-    canvas.height = canvas.clientHeight * 2;
-    ctx.scale(2, 2);
-  } else {
-    canvas.width = width;
-    canvas.height = height;
-  }
-  GLOBE_RADIUS = width;
-  GLOBE_CENTER_Z = -GLOBE_RADIUS;
-  PROJECTION_CENTER_X = width / 2;
-  PROJECTION_CENTER_Y = height / 2;
-  FIELD_OF_VIEW = width * 1.2;
-  
-  createDots(); // Reset all dots
-}
-
-// Variable used to store a timeout when user resized its screen
-let resizeTimeout;
-// Function called right after user resized its screen
-function onResize () {
-  // Clear the timeout variable
-  resizeTimeout = window.clearTimeout(resizeTimeout);
-  // Store a new timeout to avoid calling afterResize for every resize event
-  resizeTimeout = window.setTimeout(afterResize, 500);
-}
-window.addEventListener('resize', onResize);
-
 // Populate the dots array with random dots
 createDots();
-
 // Render the scene
 window.requestAnimationFrame(render);

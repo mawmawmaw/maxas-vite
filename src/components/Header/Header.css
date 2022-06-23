@@ -32,22 +32,23 @@ div#header .navbar ul li a{
     color: var(--text-color);
     text-decoration: none;
 }
-div#header .navbar ul li button.button{
+div#header .navbar ul li a.button{
     color: var(--text-color);
     border-radius: 10px;
     background-color: var(--pink-accent);
     border: 2px solid var(--blue-accent);
     box-shadow: 2px 2px 0 0 var(--aqua-accent);
     padding: 6px 22px;
-    font-weight: bold;
     font-size: 16px;
     cursor: pointer;
 }
-div#header .navbar ul li button.button:hover{
-    box-shadow: 3px 3px 0 0 var(--aqua-accent);
-}
 div#header .navbar ul li a:hover, div#header .navbar ul li a:focus{
     text-decoration: underline;
+}
+div#header .navbar ul li a.button:hover{
+    font-weight: bold;
+    box-shadow: 3px 3px 0 0 var(--aqua-accent);
+    text-decoration: none;
 }
 div#header .navbar .social-icons{
     margin-left: 20px;
@@ -74,6 +75,10 @@ div#header .navbar .social-icons svg path{
     }
     div#header .navbar ul li:last-child{
         display: block;
+        padding: 0 10px;
+    }
+    div#header .navbar ul li a.button {
+        font-size: 14px;
     }
     div#header .navbar .social-icons {
         margin-left: 0px;
