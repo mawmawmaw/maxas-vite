@@ -80,6 +80,9 @@ form.register button.button:hover{
     font-weight: bold;
     box-shadow: 8px 8px 0 0 var(--aqua-accent);
 }
+form.register button.button:disabled{
+    animation: blink 1s ease infinite;
+}
 @media screen and (max-width: 768px) {
     h2.counter {
         font-size: 32px;

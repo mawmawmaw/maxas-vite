@@ -35,9 +35,8 @@ const Mint = () => {
         }
     }
     const renderRegistration = () => {
-        if (error) {
-            return  <p>Sorry, something went wrong. Please reload.</p>
-        }
+        if (registering) return <form className='register'><button type='submit' className='button' disabled="true">Registering...</button></form>;
+        if (error) return <p>Sorry, something went wrong. Please reload.</p>
         if (registered) {
             return  <p>Thank you for registering!</p>
         }
@@ -52,7 +51,7 @@ const Mint = () => {
                     <label htmlFor="phone">Phone Number</label>
                     <input type="number" id="phone" name="phone" placeholder='55 5555 5555' required value={phone} onChange={(e)=>setPhone(e.target.value)}/>
                 </div>
-                <button type='submit' className='button' disabled={registering}>{registering ? 'Registering' : 'Register'}</button>
+                <button type='submit' className='button' disabled={registering}>{registering ? 'Registering...' : 'Register'}</button>
             </form>
             </>)
     }
