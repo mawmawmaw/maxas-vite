@@ -66,6 +66,9 @@ div#header .navbar .social-icons svg path{
         box-sizing: border-box;
         padding: 14px;
     }
+    div#header .logo img{
+        width: 120px;
+    }
     div#header .navbar ul{
         list-style-type: none;
         padding-inline-start: 0;
