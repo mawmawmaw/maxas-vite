@@ -49,6 +49,7 @@ div#hero .container h1.button:hover{
         width: 100%;
     }
     div#hero .container h1.button {
-        padding: 10px 60px;
+        padding: 6px 40px;
+        font-size: 22px;
     }
 }
