@@ -36,3 +36,12 @@ div#hero .container h1.button{
 div#hero .container h1.button:hover{
     box-shadow: 8px 8px 0 0 var(--aqua-accent);
 }
+
+@media screen and (max-width: 768px) {
+    div#hero .container .main-img {
+        width: 100%;
+    }
+    div#hero .container h1.button {
+        padding: 10px 60px;
+    }
+}

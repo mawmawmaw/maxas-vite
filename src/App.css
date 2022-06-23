@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .section{
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 76px);
   display: flex;
     align-items: center;
@@ -52,4 +52,10 @@ div#footer .social-icons svg{
 }
 div#footer .social-icons svg path{
   fill: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .section .container {
+    padding: 0 20px;
+  }
 }

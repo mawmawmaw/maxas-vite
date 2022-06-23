@@ -1,7 +1,8 @@
 div#header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     padding: 10px 0;
     background-color: rgb(255 255 255 / 10%);
     z-index: 999;
@@ -58,4 +59,26 @@ div#header .navbar .social-icons svg{
 }
 div#header .navbar .social-icons svg path{
     fill: var(--text-color);
+}
+@media screen and (max-width: 768px) {
+    div#header{
+        box-sizing: border-box;
+        padding: 14px;
+    }
+    div#header .navbar ul{
+        list-style-type: none;
+        padding-inline-start: 0;
+    }
+    div#header .navbar ul li{
+        display: none;
+    }
+    div#header .navbar ul li:last-child{
+        display: block;
+    }
+    div#header .navbar .social-icons {
+        margin-left: 0px;
+    }
+    div#header .navbar .social-icons svg {
+        padding: 5px 0 0 16px;
+    }
 }
