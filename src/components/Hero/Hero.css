@@ -6,9 +6,13 @@ div#hero .container{
 }
 div#hero .container .main-img{
     width: 420px;
-    animation: float 3s infinite ease-in-out forwards;
+    animation: floatNshine 3s infinite ease-in-out forwards;
+    background-image: url(../../assets/animation-bg.png);
+    background-size: 102%;
+    background-position: center;
+    backdrop-filter: blur(0.5px);
 }
-@keyframes float {
+@keyframes floatNshine {
 	from {
         transform: translate(0%, 0%);
         -webkit-filter: drop-shadow(0px 0px 10px #ffffff33);
