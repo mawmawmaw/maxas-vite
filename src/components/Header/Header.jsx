@@ -1,12 +1,15 @@
 import './Header.css';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import logo from '../../assets/logo.png';
 const Header = () => {
     return (
         <div id="header">
             <div className='container'>
                 <div className="logo">
-                    <HashLink to="/#"><h1>Maxas</h1></HashLink>
+                    <HashLink to="/#">
+                        <img src={logo} alt="Maxas Logo" width="200"/>
+                    </HashLink>
                 </div>
                 <div className="navbar">
                     <ul>
