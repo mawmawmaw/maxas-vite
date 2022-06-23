@@ -17,9 +17,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+div#main-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgb(61,96,115);
   background: radial-gradient(circle, var(--main-blue) 0%, var(--main-purple) 100%);
-  background-attachment: fixed;
+  z-index: -1;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;

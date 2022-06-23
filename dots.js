@@ -1,4 +1,5 @@
 const canvas = document.querySelector('#scene');
+
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 const ctx = canvas.getContext('2d');
@@ -26,8 +27,8 @@ let orbitThree = 0.94;
 /* ====== CONSTANTS ===== */
 /* ====================== */
 /* Some of those constants may change if the user resizes their screen but I still strongly believe they belong to the Constants part of the variables */
-const DOTS_AMOUNT = 5000; // Amount of dots on the screen
-let DOT_RADIUS = 1; // Radius of the dots
+let DOTS_AMOUNT = 5000; // Amount of dots on the screen
+let DOT_RADIUS = .8; // Radius of the dots
 let GLOBE_RADIUS = width; // Radius of the globe
 let GLOBE_CENTER_Z = -GLOBE_RADIUS; // Z value of the globe center
 let PROJECTION_CENTER_X = width / 2; // X center of the canvas HTML
@@ -35,6 +36,7 @@ let PROJECTION_CENTER_Y = height / 2; // Y center of the canvas HTML
 let FIELD_OF_VIEW = width * 1.2;
 
 if (window.devicePixelRatio > 1) {
+  DOTS_AMOUNT = 3000; // Amount of dots on the screen
   DOT_RADIUS = .2; // Radius of the dots
   GLOBE_RADIUS = height; // Radius of the globe
 }
@@ -128,8 +130,8 @@ function render(a) {
 
 // Function called after the user resized its screen
 function afterResize () {
-  width = canvas.offsetWidth;
-  height = canvas.offsetHeight;
+  width = canvas.clientWidth;
+  height = canvas.clientHeight;
   if (window.devicePixelRatio > 1) {
     canvas.width = canvas.clientWidth * 2;
     canvas.height = canvas.clientHeight * 2;
@@ -138,11 +140,11 @@ function afterResize () {
     canvas.width = width;
     canvas.height = height;
   }
-  GLOBE_RADIUS = width * 0.7;
+  GLOBE_RADIUS = width;
   GLOBE_CENTER_Z = -GLOBE_RADIUS;
   PROJECTION_CENTER_X = width / 2;
   PROJECTION_CENTER_Y = height / 2;
-  FIELD_OF_VIEW = width * 0.8;
+  FIELD_OF_VIEW = width * 1.2;
   
   createDots(); // Reset all dots
 }
