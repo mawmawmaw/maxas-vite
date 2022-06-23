@@ -1,0 +1,38 @@
+div#hero .container{
+    text-align: center;
+}
+div#hero .container .main-img{
+    width: 420px;
+    animation: float 3s infinite ease-in-out forwards;
+}
+@keyframes float {
+	from {
+        transform: translate(0%, 0%);
+        -webkit-filter: drop-shadow(0px 0px 10px #ffffff33);
+        filter: drop-shadow(0px 0px 10px #ffffff66);
+     }
+      65% {
+        transform: translate(0%, -5%);
+        -webkit-filter: drop-shadow(0px 0px 12px #ffffff66);
+        filter: drop-shadow(0px 0px 12px #ffffff77);
+     }
+      to {
+        transform: translate(0%, 0%);
+        -webkit-filter: drop-shadow(0px 0px 10px #ffffff33);
+        filter: drop-shadow(0px 0px 10px #ffffff66);
+     }
+}
+div#hero .container h1.button{
+    color: var(--text-color);
+    border-radius: 20px;
+    background-color: var(--pink-accent);
+    border: 5px solid var(--blue-accent);
+    box-shadow: 5px 5px 0 0 var(--aqua-accent);
+    width: 200px;
+    padding: 10px 80px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+div#hero .container h1.button:hover{
+    box-shadow: 8px 8px 0 0 var(--aqua-accent);
+}

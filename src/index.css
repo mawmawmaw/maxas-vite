@@ -1,0 +1,26 @@
+:root{
+  --pink-accent: #e14aa6;
+  --blue-accent: #779ed8;
+  --aqua-accent: #33cfd3;
+  --main-purple: #231d3e;
+  --main-blue: #3792b9;
+  --text-color: #ffffff;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 76px;
+}
+body {
+  margin: 0;
+  font-family: 'Kdam Thmor Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(61,96,115);
+  background: radial-gradient(circle, var(--main-blue) 0%, var(--main-purple) 100%);
+  background-attachment: fixed;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

@@ -1,0 +1,61 @@
+div#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(255 255 255 / 10%);
+    z-index: 999;
+}
+div#header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+div#header .logo a{
+    text-decoration: none;
+}
+div#header .logo h1 {
+    margin: 0;
+    color: var(--text-color);
+}
+div#header .navbar {
+    display: flex;
+    align-items: center;
+}
+div#header .navbar ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+div#header .navbar ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+div#header .navbar ul li button.button{
+    color: var(--text-color);
+    border-radius: 10px;
+    background-color: var(--pink-accent);
+    border: 2px solid var(--blue-accent);
+    box-shadow: 2px 2px 0 0 var(--aqua-accent);
+    padding: 6px 22px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+div#header .navbar ul li button.button:hover{
+    box-shadow: 3px 3px 0 0 var(--aqua-accent);
+}
+div#header .navbar ul li a:hover, div#header .navbar ul li a:focus{
+    text-decoration: underline;
+}
+div#header .navbar .social-icons{
+    margin-left: 20px;
+}
+div#header .navbar .social-icons svg{
+    width: 20px;
+    height: 20px;
+    padding: 5px 10px 0;
+}
+div#header .navbar .social-icons svg path{
+    fill: var(--text-color);
+}
