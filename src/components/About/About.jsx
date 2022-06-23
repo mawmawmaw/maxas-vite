@@ -1,5 +1,5 @@
 import './About.css';
-import doodle from './doodle.svg';
+import doodle from '../../assets/doodle_1.svg';
 const About = () => {
     return (
         <div id="about" className='section'>

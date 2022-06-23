@@ -1,5 +1,5 @@
 import './Context.css';
-import doodle from './doodle.svg';
+import doodle from '../../assets/doodle_3.svg';
 const Context = () => {
     return (
         <div id="context" className='section'>
