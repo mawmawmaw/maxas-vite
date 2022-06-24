@@ -36,7 +36,7 @@ const Mint = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: fullPhoneNumber
             };
-            fetch('https://maxax.xyz/api/register.php',requestOptions)
+            fetch('https://www.maxas.xyz/api/register.php',requestOptions)
             .then(response => response.json())
             .then(data => console.log(data));
         }
