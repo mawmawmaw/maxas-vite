@@ -13,7 +13,7 @@ input[type=number] {
 }
 h2.counter {
     text-align: center;
-    font-size: 52px;
+    font-size: 48px;
     padding: 10px 40px;
     margin: 0 auto 60px;
     color: var(--text-color);
