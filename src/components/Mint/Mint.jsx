@@ -31,7 +31,14 @@ const Mint = () => {
         setRegistering(true);
         if(e.target[0].value !== '' && e.target[1].value !== ''){
             let fullPhoneNumber = '+' + e.target[0].value + e.target[1].value;
-            console.log(fullPhoneNumber);
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: fullPhoneNumber
+            };
+            fetch('https://maxax.xyz/api/register.php',requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data));
         }
     }
     const renderRegistration = () => {
