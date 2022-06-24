@@ -7,6 +7,7 @@ const Mint = () => {
     const [registered, setRegistered] = useState(false);
     const [registering, setRegistering] = useState(false);
     const [error, setError] = useState(false);
+
     const initCounter = () => {
         var countDownDate = new Date("Jul 2, 2022 18:30:00").getTime();
         var x = setInterval(function() {
@@ -23,24 +24,31 @@ const Mint = () => {
             }
         }, 1000);
     }
+
     useEffect(()=>{
         initCounter();
     },[])
-    const registerPhone = (e) => {
+
+    const registerPhone = async (e) => {
         e.preventDefault();
         setRegistering(true);
         if(e.target[0].value !== '' && e.target[1].value !== ''){
             let fullPhoneNumber = '+' + e.target[0].value + e.target[1].value;
             const requestOptions = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: fullPhoneNumber
+                body: fullPhoneNumber,
             };
-            fetch('https://www.maxas.xyz/api/register.php',requestOptions)
-            .then(response => response.json())
-            .then(data => console.log(data));
+            const response = await fetch('https://www.maxas.xyz/api/register.php', requestOptions)
+            const registered = await response.json();
+            if(registered){
+                setRegistered(true);
+            }else{
+                setError(true);
+            }
+            setRegistering(false);
         }
     }
+
     const renderRegistration = () => {
         if (registering) return <form className='register'><button type='submit' className='button' disabled="true">Registering...</button></form>;
         if (error) return <p>Sorry, something went wrong. Please reload.</p>
@@ -62,6 +70,7 @@ const Mint = () => {
             </form>
             </>)
     }
+
     return (
         <div id="mint" className='section'>
             <div className='container'>
