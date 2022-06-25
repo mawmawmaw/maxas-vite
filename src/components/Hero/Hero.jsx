@@ -5,8 +5,9 @@ const Hero = () => {
         <div id="hero" className='section'>
             <div className='container'>
                 <img src={heroGif} className="main-img" alt="Maxas"/>
+                <h1>Free Pre-Mint Soon</h1>
                 <h1 className='button'>
-                    Minting Soon
+                    Register now!
                 </h1>
             </div>
         </div>

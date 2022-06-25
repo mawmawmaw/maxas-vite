@@ -3,6 +3,7 @@ import Hero from '../../components/Hero/Hero';
 import About from '../../components/About/About';
 import Wirikuta from '../../components/Wirikuta/Wirikuta';
 import Context from '../../components/Context/Context';
+import Faq from '../../components/FAQ/Faq';
 import Footer from '../../components/Footer/Footer';
 const Landing = () => {
     return (
@@ -12,6 +13,7 @@ const Landing = () => {
         <About />
         <Wirikuta />
         <Context />
+        <Faq />
         <Footer />
         </>
     )

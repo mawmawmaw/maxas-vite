@@ -29,16 +29,19 @@ div#hero .container .main-img{
         filter: drop-shadow(0px 0px 10px #ffffff66);
      }
 }
-div#hero .container h1.button{
+div#hero .container h1{
     color: var(--text-color);
+}
+div#hero .container h1.button{
     border-radius: 20px;
     background-color: var(--pink-accent);
     border: 5px solid var(--blue-accent);
     box-shadow: 5px 5px 0 0 var(--aqua-accent);
-    width: 200px;
-    padding: 10px 80px;
+    width: 250px;
+    padding: 10px 60px;
     margin: 20px auto;
     cursor: pointer;
+    text-transform: uppercase;
 }
 div#hero .container h1.button:hover{
     box-shadow: 8px 8px 0 0 var(--aqua-accent);
@@ -48,8 +51,11 @@ div#hero .container h1.button:hover{
     div#hero .container .main-img {
         width: 100%;
     }
+    div#hero .container h1{
+        font-size: 22px;
+    }
     div#hero .container h1.button {
         padding: 6px 40px;
-        font-size: 22px;
+        width: 200px;
     }
 }

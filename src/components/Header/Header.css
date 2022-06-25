@@ -85,6 +85,7 @@ div#header .navbar .social-icons svg path{
     }
     div#header .navbar ul li a.button {
         font-size: 14px;
+        padding: 10px 18px;
     }
     div#header .navbar .social-icons {
         margin-left: 0px;
